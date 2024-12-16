@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+const tailwindcssRtl = require('tailwindcss-rtl'); // Import the RTL plugin properly
+
+module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -25,7 +27,5 @@ export default {
       },
     },
   },
-  plugins: [
-    require('tailwindcss-rtl'), // Add the RTL plugin here
-  ],
+  plugins: [tailwindcssRtl], 
 };
